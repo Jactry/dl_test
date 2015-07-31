@@ -1,0 +1,21 @@
+os:
+  - linux
+
+env:
+  - WINEARCH=win32
+  - WINEARCH=""
+
+cache: apt
+
+before_install:
+  - "export DISPLAY=:99.0"
+  - "/sbin/start-stop-daemon --start --quiet --pidfile /tmp/custom_xvfb_99.pid $
+
+before_script:
+  - sudo apt-get install -y --install-recommends wine-staging wine-staging-comp$
+  - date
+  - wget http://61.144.43.96:8088/lol/msys2-base-i686-20150512-20150731.deb
+  - date
+  - sudo dpkg -i msys2-base-i686-20150512-20150731.deb
+  - msys2init
+  - msys2run "echo hello"
