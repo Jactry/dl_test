@@ -16,7 +16,7 @@ before_script:
   - sudo apt-get update -qq
   - sudo apt-get install -y --install-recommends wine-staging wine-staging-compat subversion wget
   - date
-  - wget https://dl.dropboxusercontent.com/u/107674004/msys2-base-i686-20150512-20150731.deb
+  - wget https://dl.dropboxusercontent.com/u/38458267/msys2/msys2-base-i686-20150512-20150731.deb
   - date
   - sudo dpkg -i msys2-base-i686-20150512-20150731.deb
   - msys2init
